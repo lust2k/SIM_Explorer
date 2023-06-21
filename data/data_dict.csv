@@ -1,0 +1,23 @@
+Variable name,Type,Description
+DTOBITO,datetime,Date of death
+HORAOBITO,string,Time of death
+CAUSABAS,string,Cause of death codes as defined by ICD
+LOCOCOR,string,Place of death
+CODMUN,int,Municipality of residence codes as defined by IBGE
+IDADE,int,Age
+SEXO,string,Sex
+RACACOR,string,Race/color as classified by IBGE
+ESC,string,Highest level of education
+ESTCIV,string,Civil status
+age_group,category,Age group
+method,string,Suicide method
+name_muni,string,Municipality of residence's name
+pop_muni,int,Municipality of residence's population
+num_facilities,int,Number of healthcare facilities with mental health support in the municipality
+year,int,Year of death
+month,int,Month of death
+day,int,Day of death
+season,string,Season of the year of death
+weekday,string,Weekday of death
+holiday,bool,Death happened on a holiday?
+period,string,Day period of death
