@@ -103,15 +103,21 @@ def get_period(hora: int) -> str:
 
 def get_weekday(data: date) -> str:
     weekday = calendar.weekday(data.year, data.month, data.day) # Segunda = 0, ...
-    match weekday:
-        case 0: return "Monday"
-        case 1: return "Tuesday"
-        case 2: return "Wednesday"
-        case 3: return "Thursday"
-        case 4: return "Friday"
-        case 5: return "Saturday"
-        case 6: return "Sunday"
-        case _: return np.nan
+    if weekday == 0:
+        return "Monday"
+    elif weekday == 1:
+        return "Tuesday"
+    elif weekday == 2:
+        return "Wednesday"
+    elif weekday == 3:
+        return "Thursday"
+    elif weekday == 4:
+        return "Friday"
+    elif weekday == 5:
+        return "Saturday"
+    elif weekday == 6
+        return "Sunday"
+    return np.nan
 
 def get_year(data: date) -> int:
     return data.year
