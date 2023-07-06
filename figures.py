@@ -83,7 +83,7 @@ def feature_cluster_heatmap(df, feature: str) -> plt.figure:
     ax.set_title("Means of %s per cluster" % feature)
     return fig
 
-def state_geomap(df: pd.DataFrame, state: str | int, feature: str) -> plt.figure:
+def state_geomap(df: pd.DataFrame, state, feature: str) -> plt.figure:
     """
     Generate a map of the state with distribution of a feature per municipality
     """
