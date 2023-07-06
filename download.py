@@ -181,10 +181,12 @@ def download_db(database: str, states: list = download_states, years: list = dow
     Download parquets with PySUS and concatenate them all into a single dataframe.
     """
     parquets = []
-    match database:
-        case "SIM": parquets = SIM.download(states=states, years=years)
-        case "CNES": parquets = CNES.download(group='ST', states=states, years=years, months=1)
-        case _: raise ValueError("download.get_database: available databases are SIM and CNES\n")
+    if database == "SIM":
+        parquets = SIM.download(states=states, years=years)
+    elif database == "CNES":
+        parquets = CNES.download(group='ST', states=states, years=years, months=1)
+    else:
+        raise ValueError("download.get_database: available databases are SIM and CNES\n")
     print(f"download_db: {database} parquet files downloaded.")
     df_list = []
     for path in parquets:
