@@ -26,6 +26,7 @@ selected_years = st.multiselect("Years: ", options=util.available_years, default
 selected_data = preprocessed_data.loc[(preprocessed_data['state'].isin(selected_states)) & 
                                       (preprocessed_data['year'].isin(selected_years))]
 categorical_features = selected_data.select_dtypes(exclude=[np.number]).columns.tolist()
+categorical_features.append("year")
 
 if st.button(label="Describe", type="primary"):
     st.write("Descriptive statistics for numerical features: ", selected_data.describe(include=np.number),
