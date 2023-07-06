@@ -115,7 +115,7 @@ def get_weekday(data: date) -> str:
         return "Friday"
     elif weekday == 5:
         return "Saturday"
-    elif weekday == 6
+    elif weekday == 6:
         return "Sunday"
     return np.nan
 
