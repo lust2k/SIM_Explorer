@@ -70,7 +70,7 @@ def decode_age(age: str) -> int:
 def decode_date(date_str: str) -> date:
     return decoders.decodifica_data_SIM(date_str)
 
-def get_state(codmun: int | str) -> str:
+def get_state(codmun) -> str:
     return dict_states.get(str(codmun)[:2])
 
 def get_suicide_method(icd: str) -> str:
